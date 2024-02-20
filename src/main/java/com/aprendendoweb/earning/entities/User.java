@@ -1,32 +1,46 @@
 package com.aprendendoweb.earning.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_user")
-public final class User implements Serializable, Comparable<User> {
+public class User implements Serializable {
 	
 		private static final long serialVersionUID = 1L;
 		
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
+		
 		@Column(name= "ds_nome")
 		private String name;
+		
 		@Column(name= "ds_email")
 		private String email;
+		
 		@Column(name= "ds_phone")
 		private String phone;
+		
 		@Column(name= "ds_password")
 		private String password;
+		
+		
+		@JsonManagedReference
+		@OneToMany(mappedBy = "client")
+		private List<Order> orders = new ArrayList<>();
 		
 		public User(){
 			
@@ -39,7 +53,10 @@ public final class User implements Serializable, Comparable<User> {
 			this.phone = phone;
 			this.password = password;
 		}
-
+		
+		public List<Order> getOrder(){
+			return orders;
+		}
 		
 		public Long getId() {
 			return id;
@@ -103,12 +120,5 @@ public final class User implements Serializable, Comparable<User> {
 			User other = (User) obj;
 			return Objects.equals(id, other.id);
 		}
-
-		@Override
-		public int compareTo(User o) {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-		
-		
+	
 }

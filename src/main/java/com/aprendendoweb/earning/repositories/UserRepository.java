@@ -1,4 +1,4 @@
-package com.aprendendoweb.earning.repositories;
+	package com.aprendendoweb.earning.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

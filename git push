@@ -1,0 +1,29 @@
+[33mcommit a32639711ad894115a8837ecd8ddbd9f0ba53faf[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Otavio Augusto <oaugusto265@gmail.com>
+Date:   Wed Feb 21 11:01:14 2024 -0300
+
+    Created OrderItem and OrderItemPK
+
+[33mcommit e4fcb2a3f230a4f7645bdc9d3dda57c12840a758[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Otavio Augusto <oaugusto265@gmail.com>
+Date:   Wed Feb 21 01:13:01 2024 -0300
+
+    Many-to-Many Association
+
+[33mcommit 9e45780c9fa40e90dee4a10c2770c60bb534622a[m
+Author: Otavio Augusto <oaugusto265@gmail.com>
+Date:   Mon Feb 19 22:36:56 2024 -0300
+
+    Create Order class
+
+[33mcommit f15270cae69ee006fa878aa1a4179db9f5767583[m
+Author: Otavio Augusto <oaugusto265@gmail.com>
+Date:   Mon Feb 19 00:12:59 2024 -0300
+
+    Resouce e Services configurados
+
+[33mcommit d462b37d5002488a60c11e5a196b1d4ca096b402[m
+Author: Otavio Augusto <oaugusto265@gmail.com>
+Date:   Sun Feb 18 18:46:57 2024 -0300
+
+    First commit

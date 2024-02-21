@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
+import com.aprendendoweb.earning.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -34,10 +35,21 @@ public  class Order implements Serializable {
 	@JoinColumn(name= "fk_cliente")
 	private User client;
 	
-	public Order(Long id, Instant moment, User client) {	
+	private Integer orderStatus;
+	
+	public Order(Long id, Instant moment, User client,OrderStatus orderStatus) {	
 		this.id = id;
 		this.moment = moment;
 		this.client = client;
+		setOrderStatus(orderStatus);
+	}
+
+	public OrderStatus getOrderStatus() {
+		return OrderStatus.valueOf(orderStatus);
+	}
+
+	public void setOrderStatus(OrderStatus orderStatus) {
+		this.orderStatus = orderStatus.getCode();
 	}
 
 	public Order(){
